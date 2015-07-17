@@ -26,6 +26,8 @@ rpm -ivh /home/vagrant/oracle/Disk1/oracle-xe-11.2.0*.rpm
 rm -rf /home/vagrant/oracle
 /etc/init.d/oracle-xe configure responseFile=/vagrant/xe.rsp
 /etc/init.d/oracle-xe start
+echo Setup Oracle environment
+. /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh
 echo '. /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh' >> /home/vagrant/.bash_profile
 
 if [ ! -f /vagrant/postinstall.sh ]; then
